@@ -1,0 +1,32 @@
+{
+  "reload_style_on_change": true,
+
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  "fixed-center": true,
+  "height": 40,
+  "margin": "5 10 0 10",
+  "spacing": 0,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock", "custom/logo", "custom/weather"],
+  "modules-right": ["wireplumber", "tray"],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*": 3
+    }
+  },
+
+  "clock": {
+    "format": "   {:%R} ",
+    "tooltip": false
+  },
+
+  "custom/logo": {
+    "format": "󰣇 ",
+    "on-click": "kitty"
+  }
+}

@@ -1,0 +1,31 @@
+/* Import your theme here */
+/*@import "themes/gruvbox.css";*/
+@import "themes/everforest.css";
+
+* {
+  font-family: FiraCode Nerd Font;
+  font-size: 15px;
+  color: @white;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: @black;
+  border-radius: 10px;
+  padding: 0 8px;
+}
+
+#workspaces button{
+  font-weight: bold;
+  border-radius: 20px;
+  margin: 3px;
+}
+
+#workspaces button.active {
+  background-color: @bg_green;
+}
