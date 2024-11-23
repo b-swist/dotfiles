@@ -16,5 +16,6 @@ alias ll='ls -la'
 alias vim='nvim'
 alias v='nvim'
 alias spotify='spotify_player'
+alias dots='cd ~/.dotfiles'
 
 PS1='\[\e[32m\][\w] \[\e[35m\]\$ \[\e[0m\]'
