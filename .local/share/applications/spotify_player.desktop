@@ -1,8 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=Spotify-player
+Name=spotify-player
 GenericName=Spotify Client
 Comment=A Spotify player in the terminal with full feature parity
-Icon=utilities-terminal
 Terminal=true
 Exec=spotify_player
