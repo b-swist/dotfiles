@@ -1,31 +1,91 @@
 /* Import your theme here */
-/*@import "themes/gruvbox.css";*/
 @import "themes/everforest.css";
 
 * {
   font-family: FiraCode Nerd Font;
-  font-size: 15px;
-  color: @white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 window#waybar {
   background-color: transparent;
+  color: @white;
 }
-
+/*
 .modules-left,
 .modules-center,
 .modules-right {
+  border-radius: 12px;
   background-color: @black;
-  border-radius: 10px;
-  padding: 0 8px;
+  padding: 0 5px;
+}
+*/
+.module {
+  border-radius: 12px;
+  background-color: @black;
+  padding: 0 10px;
 }
 
-#workspaces button{
-  font-weight: bold;
-  border-radius: 20px;
-  margin: 3px;
+#workspaces {
+  padding: 0 6px;
+}
+
+#workspaces button {
+  color: @white;
+  margin: 4px;
+  border-radius: 12px;
 }
 
 #workspaces button.active {
+  background-color: @green;
+  color: @black;
+}
+
+#workspaces button:hover {
+  background: @bg_green;
+  color: @white;
+}
+
+#window {
   background-color: @bg_green;
+  margin: 0 10px;
+}
+
+#clock {
+  padding: 0 14px;
+}
+
+#pulseaudio {
+  padding-right: 6px;
+  background-color: @bg_green;
+}
+
+#other {
+  margin: 0 5px;
+  background-color: @bg_blue;
+  border-radius: 12px;
+}
+
+#network,
+#tray {
+  background-color: transparent;
+  padding: 0 11px;
+  padding-right: 9px;
+}
+
+#powermenu,
+#custom-menu,
+#custom-poweroff,
+#custom-lock,
+#custom-reboot {
+  background: @bg_purple;
+  border-radius: 12px;
+}
+
+#custom-menu {
+  padding: 0 14px;
+  padding-right: 13px;
 }
