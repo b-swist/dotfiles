@@ -6,7 +6,7 @@
   "exclusive": true,
   "fixed-center": true,
   "height": 40,
-  "margin": "5 10 0 10",
+   "margin": "5 10 0 10",
   "spacing": 0,
 
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
@@ -34,13 +34,10 @@
 
   "hyprland/window": {
     "format": "{}",
-    "tooltip": true,
-    "tooltip-format": "{}"
   },
 
   "clock": {
     "format": "{:%R | %A, %B %d, %Y}",
-    "format-alt": "{:%A, %B %d, %Y | %R}",
     "tooltip": false
   },
 

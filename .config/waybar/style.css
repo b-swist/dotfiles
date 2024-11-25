@@ -2,6 +2,7 @@
 @import "themes/everforest.css";
 
 * {
+  all: unset;
   font-family: FiraCode Nerd Font;
   font-size: 16px;
   font-weight: bold;
@@ -14,15 +15,7 @@ window#waybar {
   background-color: transparent;
   color: @white;
 }
-/*
-.modules-left,
-.modules-center,
-.modules-right {
-  border-radius: 12px;
-  background-color: @black;
-  padding: 0 5px;
-}
-*/
+
 .module {
   border-radius: 12px;
   background-color: @black;
@@ -30,13 +23,15 @@ window#waybar {
 }
 
 #workspaces {
-  padding: 0 6px;
+  padding: 0 5px;
 }
 
 #workspaces button {
   color: @white;
-  margin: 4px;
-  border-radius: 12px;
+  margin: 7px 5px;
+  border-radius: 10px;
+  padding: 0 10px;
+  min-width: 15px;
 }
 
 #workspaces button.active {
@@ -44,14 +39,9 @@ window#waybar {
   color: @black;
 }
 
-#workspaces button:hover {
-  background: @bg_green;
-  color: @white;
-}
-
 #window {
   background-color: @bg_green;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 #clock {
