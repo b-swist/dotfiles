@@ -6,24 +6,20 @@
   font-family: FiraCode Nerd Font;
   font-size: 16px;
   font-weight: bold;
-  border: none;
-  text-shadow: none;
-  box-shadow: none;
 }
 
 window#waybar {
-  background-color: transparent;
   color: @fg;
 }
 
 .module {
   border-radius: 12px;
-  background-color: @bg;
   padding: 0 10px;
 }
 
 #workspaces {
   padding: 0 5px;
+  background-color: @bg;
 }
 
 #workspaces button {
@@ -44,8 +40,41 @@ window#waybar {
   margin: 0 5px;
 }
 
+window#waybar.empty #window {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
 #clock {
+  background-color: @bg;
   padding: 0 14px;
+}
+
+#hardware {
+  background-color: @red;
+  border-radius: 12px;
+  margin-right: 5px;
+}
+
+#cpu {
+  padding-right: 0;
+}
+
+#custom-separator {
+  padding-right: 5px;
+  padding-left: 14px;
+}
+
+#memory {
+  padding-left: 0;
+  padding-right: 16px;
+}
+
+#custom-pacman {
+  background-color: @yellow;
+  padding-right: 16px;
+  margin-right: 5px;
 }
 
 #pulseaudio {
@@ -59,23 +88,21 @@ window#waybar {
   border-radius: 12px;
 }
 
-#network,
-#tray {
-  background-color: transparent;
+#network {
   padding: 0 11px;
   padding-right: 9px;
 }
 
-#powermenu,
-#custom-menu,
-#custom-poweroff,
-#custom-lock,
-#custom-reboot {
-  background: @purple;
+#powermenu {
+  background-color: @purple;
   border-radius: 12px;
 }
 
 #custom-menu {
   padding: 0 14px;
   padding-right: 13px;
+}
+
+#custom-reboot {
+  padding-right: 6px;
 }

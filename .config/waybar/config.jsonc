@@ -11,7 +11,13 @@
 
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "group/other", "group/powermenu"],
+  "modules-right": [
+    "group/hardware",
+    "custom/pacman",
+    "pulseaudio",
+    "group/other",
+    "group/powermenu"
+  ],
 
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -32,13 +38,42 @@
     }
   },
 
-  "hyprland/window": {
-    "format": "{}",
-  },
-
   "clock": {
     "format": "{:%R | %A, %B %d, %Y}",
     "tooltip": false
+  },
+
+  "custom/pacman": {
+    "format": "{} ",
+    "interval": 60,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0",
+    // "on-click": "kitty -e 'bash sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
+    // "signal": 8
+  },
+
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "custom/separator",
+      "memory"
+    ]
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": "{usage}% ",
+    "max-length": 10
+  },
+
+  "custom/separator": {
+    "format": "|"
+  },
+
+  "memory": {
+    "interval": 10,
+    "format": "{used:0.0f}G/{total:0.0f}G "
   },
 
   "pulseaudio": {
@@ -62,8 +97,7 @@
     "format": " ",
     "format-disconnected": " ",
     "format-alt": "󰕒{bandwidthUpBytes} 󰇚{bandwidthDownBytes}",
-    "interval": 1,
-    "tooltip": false
+    "interval": 30,
   },
 
   "group/powermenu": {
