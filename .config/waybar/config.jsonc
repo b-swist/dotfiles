@@ -6,16 +6,22 @@
   "exclusive": true,
   "fixed-center": true,
   "height": 40,
-   "margin": "5 10 0 10",
+  "margin": "5 10 0 10",
   "spacing": 0,
 
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock"],
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "group/hardware",
     "custom/pacman",
-    "pulseaudio",
     "group/other",
+    "pulseaudio",
+    "custom/notification",
     "group/powermenu"
   ],
 
@@ -30,8 +36,7 @@
       "6": "VI",
       "7": "VII",
       "8": "VIII",
-      "9": "IX",
-      "10": "X"
+      "9": "IX"
     },
     "persistent-workspaces": {
       "*": 3
@@ -44,10 +49,10 @@
   },
 
   "custom/pacman": {
-    "format": "{} ",
+    "format": "{}  ",
     "interval": 60,
     "exec": "checkupdates | wc -l",
-    "exec-if": "exit 0",
+    "exec-if": "exit 0"
     // "on-click": "kitty -e 'bash sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
     // "signal": 8
   },
@@ -63,28 +68,33 @@
 
   "cpu": {
     "interval": 10,
-    "format": "{usage}% ",
-    "max-length": 10
+    "format": "{usage}%  ",
+    "max-length": 10,
+    "tooltip": false
   },
 
   "custom/separator": {
-    "format": "|"
+    "format": "|",
+    "tooltip": false
   },
 
   "memory": {
     "interval": 10,
-    "format": "{used:0.0f}G/{total:0.0f}G "
+    "format": "{used:0.0f}G/{total:0.0f}G  "
   },
 
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "format-muted": " ",
-    "format-icons": [" ", " ", " "],
+    "format-icons": [
+      " ",
+      " ",
+      " "
+    ],
     "scroll-step": 5,
     "on-click": "pavucontrol",
     "tooltip": false
   },
-
   "group/other": {
     "orientation": "horizontal",
     "modules": [
@@ -98,42 +108,62 @@
     "format-disconnected": " ",
     "format-alt": "󰕒{bandwidthUpBytes} 󰇚{bandwidthDownBytes}",
     "interval": 30,
+    "tooltip": false
+  },
+
+  "tray": {
+
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "none": "󰂚 ",
+      "notification": "󰂚<span foreground='red'><sup></sup></span> ",
+      "dnd-none": "󰂛 ",
+      "dnd-notification": "󰂛<span foreground='red'><sup></sup></span> ",
+      "inhibited-none": "󰂚 ",
+      "inhibited-notification": "󰂚<span foreground='red'><sup></sup></span> ",
+      "dnd-inhibited-none": "󰂛 ",
+      "dnd-inhibited-notification": "󰂛<span foreground='red'><sup></sup></span> "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   },
 
   "group/powermenu": {
     "orientation": "inherit",
     "drawer": {
-      "transition-left-to-right": false,
+      "transition-left-to-right": false
+
     },
     "modules": [
       "custom/poweroff",
-      "custom/lock",
       "custom/sleep",
       "custom/reboot"
     ]
   },
 
   "custom/poweroff": {
-    "format": "",
+    "format": " ",
     "on-double-click": "poweroff",
     "tooltip": false
   },
 
   "custom/sleep": {
-    "format": "󰒲",
+    "format": "󰒲 ",
     "on-double-click": "systemctl suspend",
     "tooltip": false
   },
 
   "custom/reboot": {
-    "format": "",
+    "format": " ",
     "on-double-click": "reboot",
-    "tooltip": false
-  },
-
-  "custom/lock": {
-    "format": "",
-    "on-double-click": "hyprlock --immediate",
     "tooltip": false
   },
 }

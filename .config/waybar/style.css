@@ -12,101 +12,123 @@ window#waybar {
   color: @fg;
 }
 
-.module {
-  border-radius: 12px;
-  padding: 0 10px;
-}
+/*.module {*/
+  /*border-radius: 12px;*/
+  /*padding: 0 10px;*/
+/*}*/
 
 #workspaces {
-  padding: 0 5px;
   background-color: @bg;
+  border-radius: 12px;
+  padding: 0 5px;
 }
 
 #workspaces button {
   color: @fg;
-  margin: 7px 5px;
   border-radius: 10px;
+  min-width: 14px;
   padding: 0 10px;
-  min-width: 15px;
+  margin: 7px 5px;
 }
 
 #workspaces button.active {
-  background-color: @ws;
   color: @bg;
+  background-color: @ws;
 }
 
 #window {
   background-color: @green;
+  border-radius: 12px;
+  padding: 0 10px;
   margin: 0 5px;
 }
 
 window#waybar.empty #window {
+  background-color: transparent;
   padding: 0;
   margin: 0;
-  background-color: transparent;
 }
 
 #clock {
   background-color: @bg;
+  border-radius: 12px;
   padding: 0 14px;
 }
 
 #hardware {
   background-color: @red;
   border-radius: 12px;
-  margin-right: 5px;
-}
-
-#cpu {
-  padding-right: 0;
+  padding: 0 10px;
+  margin-left: 5px;
 }
 
 #custom-separator {
-  padding-right: 5px;
-  padding-left: 14px;
-}
-
-#memory {
-  padding-left: 0;
-  padding-right: 16px;
+  padding-left: 2px;
+  padding-right: 6px;
 }
 
 #custom-pacman {
-  background-color: @yellow;
-  padding-right: 16px;
-  margin-right: 5px;
-}
-
-#pulseaudio {
-  padding-right: 6px;
-  background-color: @green;
+  background-color: @orange;
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 7px;
+  margin-left: 5px;
 }
 
 #other {
-  margin: 0 5px;
-  background-color: @blue;
+  background-color: @yellow;
   border-radius: 12px;
+  padding-left: 12px;
+  padding-right: 10px;
+  margin-left: 5px;
 }
 
-#network {
-  padding: 0 11px;
-  padding-right: 9px;
+#pulseaudio {
+  background-color: @green;
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 3px;
+  margin-left: 5px;
+}
+
+#custom-notification {
+  background-color: @blue;
+  border-radius: 12px;
+  padding-left: 14px;
+  padding-right: 6px;
+  margin-left: 5px;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+  padding-left: 13px;
+  padding-right: 7px;
+}
+
+#custom-notification.notification,
+#custom-notification.inhibited-notification {
+  padding-right: 0;
+}
+
+#custom-notification.dnd-notification,
+#custom-notification.dnd-inhibited-notification {
+  padding-left: 13px;
+  padding-right: 1px;
 }
 
 #powermenu {
   background-color: @purple;
   border-radius: 12px;
+  padding-left: 13px;
+  padding-right: 6px;
+  margin-left: 5px;
 }
 
-#custom-poweroff {
-  padding-left: 12px;
-  padding-right: 15px;
+#custom-sleep {
+  padding: 0 5px;
 }
 
 #custom-reboot {
-  padding-right: 7px;
-}
-
-#custom-logout {
-  padding-left: 14px;
+  padding-left: 6px;
+  padding-right: 10px;
 }
