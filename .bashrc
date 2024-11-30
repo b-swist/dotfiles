@@ -21,4 +21,4 @@ alias spotify='spotify_player'
 alias dots='cd ~/.dotfiles'
 alias rd='rmdir'
 
-PS1='\[\e[32m\][\w] \[\e[35m\]\$ \[\e[0m\]'
+PS1='\n\[\e[32m\] \w\n\[\e[35m\] > \[\e[0m\]'

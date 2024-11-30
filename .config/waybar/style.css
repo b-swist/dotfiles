@@ -98,11 +98,15 @@ window#waybar.empty #window {
   border-radius: 12px;
 }
 
-#custom-menu {
-  padding: 0 14px;
-  padding-right: 13px;
+#custom-poweroff {
+  padding-left: 12px;
+  padding-right: 15px;
 }
 
 #custom-reboot {
-  padding-right: 6px;
+  padding-right: 7px;
+}
+
+#custom-logout {
+  padding-left: 14px;
 }

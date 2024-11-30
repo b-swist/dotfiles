@@ -104,34 +104,36 @@
     "orientation": "inherit",
     "drawer": {
       "transition-left-to-right": false,
-      "children-class": "power-drawer",
-      "click-to-reveal": true
     },
     "modules": [
-      "custom/menu",
       "custom/poweroff",
       "custom/lock",
+      "custom/sleep",
       "custom/reboot"
     ]
   },
 
-  "custom/menu": {
-    "format": "󰍃",
-    "tooltip": false
-  },
-
   "custom/poweroff": {
     "format": "",
+    "on-double-click": "poweroff",
     "tooltip": false
   },
 
-  "custom/lock": {
-    "format": "",
+  "custom/sleep": {
+    "format": "󰒲",
+    "on-double-click": "systemctl suspend",
     "tooltip": false
   },
 
   "custom/reboot": {
     "format": "",
+    "on-double-click": "reboot",
     "tooltip": false
-  }
+  },
+
+  "custom/lock": {
+    "format": "",
+    "on-double-click": "hyprlock --immediate",
+    "tooltip": false
+  },
 }
