@@ -86,7 +86,7 @@
   "network": {
     "format": " ",
     "format-disconnected": " ",
-    "format-alt": "󰕒{bandwidthUpBytes} 󰇚{bandwidthDownBytes}",
+    "format-alt": "󰇚{bandwidthDownBytes} 󰕒{bandwidthUpBytes}",
     "interval": 5,
     "tooltip": false
   },

@@ -28,7 +28,7 @@ window#waybar {
 
 #workspaces button.active {
   color: @bg;
-  background-color: @main;
+  background-color: @fg;
 }
 
 #window {
@@ -97,8 +97,8 @@ window#waybar.empty #window {
 #custom-notification {
   background-color: @blue;
   border-radius: 12px;
-  padding-left: 15px;
-  padding-right: 7px;
+  padding-left: 14px;
+  padding-right: 6px;
   margin-left: 5px;
 }
 
@@ -106,15 +106,15 @@ window#waybar.empty #window {
 #custom-notification.dnd-inhibited-none,
 #custom-notification.dnd-notification,
 #custom-notification.dnd-inhibited-notification {
-  padding-left: 14px;
-  padding-right: 8px;
+  padding-left: 13px;
+  padding-right: 7px;
 }
 
 #powermenu {
   background-color: @purple;
   border-radius: 12px;
-  padding-left: 14px;
-  padding-right: 7px;
+  padding-left: 13px;
+  padding-right: 6px;
   margin-left: 5px;
 }
 

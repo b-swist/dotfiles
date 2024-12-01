@@ -7,6 +7,7 @@ export EDITOR=nvim
 export VISUAL=$EDITOR
 export TERMINAL=kitty
 export PATH=/home/anon/.cargo/bin:$PATH
+export HISTCONTROL=ignoredups
 
 # set -o vi
 
@@ -21,4 +22,4 @@ alias spotify='spotify_player'
 alias dots='cd ~/.dotfiles'
 alias rd='rmdir'
 
-PS1='\n\[\e[32m\] \w\n\[\e[35m\] > \[\e[0m\]'
+PS1='\n \[\e[34m\]\u \[\e[36m\]in \[\e[32m\][\w]\n \[\e[35m\]> \[\e[0m\]'
