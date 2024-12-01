@@ -1,20 +1,98 @@
 @import 'themes/everforest.css';
 
 * {
-  font-family: FiraCode Nerd Font;
-}
-
-.notification {
-  background-color: @bg;
-  opacity: 0.90;
-  border-radius: 12px;
+	all: unset;
+	font-family: FiraCode Nerd Font;
 }
 
 .control-center {
-  background-color: @bg;
-  opacity: 0.90;
+	background-color: @bg_dim;
+	/*opacity: 0.90;*/
+	border-radius: 12px;
 }
 
 .control-center .notification {
-  background-color: @green;
+	background-color: @bg;
+	margin-left: 10px;
+}
+.widget-title {
+	font-size: 16px;
+	font-weight: bold;
+	color: @fg;
+	margin: 15px;
+}
+
+.widget-title > button {
+	background-color: @bg;
+	border-radius: 12px;
+	padding: 8px;
+}
+
+.widget-title > button:hover {
+	background: @bg2;
+	transition: background 0.15s ease-in-out;
+}
+
+.widget-dnd {
+	font-size: 14px;
+	font-weight: bold;
+	color: @fg;
+	margin: 0 15px;
+}
+
+.widget-dnd > switch {
+	color: transparent;
+	background-color: @bg;
+	border-radius: 12px;
+	padding: 6px 4px;
+}
+
+.widget-dnd > switch:checked {
+	/*background-color: @green;*/
+}
+
+.widget-dnd > switch slider {
+	background: @fg;
+	border-radius: 100%;
+	min-width: 20px;
+	min-height: 20px;
+}
+
+.notification {
+	background-color: @bg_dim;
+	color: @fg;
+	/*opacity: 0.90;*/
+	border-radius: 12px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.notification-content {
+	margin: 10px;
+}
+
+.notification .time {
+	margin-right: 10px;
+	/*vertical-align: text-top;*/
+}
+
+.notification .image {
+	border-radius: 12px;
+	margin-right: 10px;
+}
+
+.close-button {
+	background-color: @bg;
+	border-radius: 100%;
+	min-width: 20px;
+	min-height: 20px;
+}
+
+.close-button:hover {
+	background-color: @red;
+	transition: background 0.15s ease-in-out;
+}
+
+.notification.critical {
+	background-color: @bg_red;
 }
