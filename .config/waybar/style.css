@@ -65,9 +65,17 @@ window#waybar.empty #window {
 #other {
   background-color: @orange;
   border-radius: 12px;
+  margin-left: 5px;
+}
+
+#network {
   padding-left: 12px;
   padding-right: 10px;
-  margin-left: 5px;
+}
+
+#network.disconnected {
+  padding-left: 14px;
+  padding-right: 8px;
 }
 
 #custom-pacman {
@@ -82,15 +90,15 @@ window#waybar.empty #window {
   background-color: @green;
   border-radius: 12px;
   padding-left: 10px;
-  padding-right: 3px;
+  padding-right: 5px;
   margin-left: 5px;
 }
 
 #custom-notification {
   background-color: @blue;
   border-radius: 12px;
-  padding-left: 14px;
-  padding-right: 6px;
+  padding-left: 15px;
+  padding-right: 7px;
   margin-left: 5px;
 }
 
@@ -98,15 +106,15 @@ window#waybar.empty #window {
 #custom-notification.dnd-inhibited-none,
 #custom-notification.dnd-notification,
 #custom-notification.dnd-inhibited-notification {
-  padding-left: 13px;
-  padding-right: 7px;
+  padding-left: 14px;
+  padding-right: 8px;
 }
 
 #powermenu {
   background-color: @purple;
   border-radius: 12px;
-  padding-left: 13px;
-  padding-right: 6px;
+  padding-left: 14px;
+  padding-right: 7px;
   margin-left: 5px;
 }
 
