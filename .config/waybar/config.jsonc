@@ -18,8 +18,8 @@
   ],
   "modules-right": [
     "group/hardware",
-    "custom/pacman",
     "group/other",
+    "custom/pacman",
     "pulseaudio",
     "custom/notification",
     "group/powermenu"
@@ -48,15 +48,6 @@
     "tooltip": false
   },
 
-  "custom/pacman": {
-    "format": "{}  ",
-    "interval": 60,
-    "exec": "checkupdates | wc -l",
-    "exec-if": "exit 0"
-    // "on-click": "kitty -e 'bash sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
-    // "signal": 8
-  },
-
   "group/hardware": {
     "orientation": "horizontal",
     "modules": [
@@ -83,18 +74,6 @@
     "format": "{used:0.0f}G/{total:0.0f}G  "
   },
 
-  "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-muted": " ",
-    "format-icons": [
-      " ",
-      " ",
-      " "
-    ],
-    "scroll-step": 5,
-    "on-click": "pavucontrol",
-    "tooltip": false
-  },
   "group/other": {
     "orientation": "horizontal",
     "modules": [
@@ -115,18 +94,41 @@
 
   },
 
+  "custom/pacman": {
+    "tooltip": false,
+    "format": "{}  ",
+    "interval": 60,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0"
+    // "on-click": "kitty -e 'bash sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
+    // "signal": 8
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": " ",
+    "format-icons": [
+      " ",
+      " ",
+      " "
+    ],
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
       "none": "󰂚 ",
-      "notification": "󰂚<span foreground='red'><sup></sup></span> ",
+      "notification": "󱅫 ",
       "dnd-none": "󰂛 ",
-      "dnd-notification": "󰂛<span foreground='red'><sup></sup></span> ",
+      "dnd-notification": "󰂛 ",
       "inhibited-none": "󰂚 ",
-      "inhibited-notification": "󰂚<span foreground='red'><sup></sup></span> ",
+      "inhibited-notification": "󱅫 ",
       "dnd-inhibited-none": "󰂛 ",
-      "dnd-inhibited-notification": "󰂛<span foreground='red'><sup></sup></span> "
+      "dnd-inhibited-notification": "󰂛 "
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -151,19 +153,19 @@
 
   "custom/poweroff": {
     "format": " ",
-    "on-double-click": "poweroff",
+    "on-click": "poweroff",
     "tooltip": false
   },
 
   "custom/sleep": {
     "format": "󰒲 ",
-    "on-double-click": "systemctl suspend",
+    "on-click": "systemctl suspend",
     "tooltip": false
   },
 
   "custom/reboot": {
     "format": " ",
-    "on-double-click": "reboot",
+    "on-click": "reboot",
     "tooltip": false
   },
 }

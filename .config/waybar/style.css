@@ -12,11 +12,6 @@ window#waybar {
   color: @fg;
 }
 
-/*.module {*/
-  /*border-radius: 12px;*/
-  /*padding: 0 10px;*/
-/*}*/
-
 #workspaces {
   background-color: @bg;
   border-radius: 12px;
@@ -33,7 +28,7 @@ window#waybar {
 
 #workspaces button.active {
   color: @bg;
-  background-color: @ws;
+  background-color: @main;
 }
 
 #window {
@@ -63,23 +58,23 @@ window#waybar.empty #window {
 }
 
 #custom-separator {
-  padding-left: 2px;
-  padding-right: 6px;
-}
-
-#custom-pacman {
-  background-color: @orange;
-  border-radius: 12px;
-  padding-left: 10px;
+  padding-left: 4px;
   padding-right: 7px;
-  margin-left: 5px;
 }
 
 #other {
-  background-color: @yellow;
+  background-color: @orange;
   border-radius: 12px;
   padding-left: 12px;
   padding-right: 10px;
+  margin-left: 5px;
+}
+
+#custom-pacman {
+  background-color: @yellow;
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 7px;
   margin-left: 5px;
 }
 
@@ -100,20 +95,11 @@ window#waybar.empty #window {
 }
 
 #custom-notification.dnd-none,
-#custom-notification.dnd-inhibited-none {
-  padding-left: 13px;
-  padding-right: 7px;
-}
-
-#custom-notification.notification,
-#custom-notification.inhibited-notification {
-  padding-right: 0;
-}
-
+#custom-notification.dnd-inhibited-none,
 #custom-notification.dnd-notification,
 #custom-notification.dnd-inhibited-notification {
   padding-left: 13px;
-  padding-right: 1px;
+  padding-right: 7px;
 }
 
 #powermenu {
@@ -125,7 +111,8 @@ window#waybar.empty #window {
 }
 
 #custom-sleep {
-  padding: 0 5px;
+  padding-left: 0;
+  padding-right:  5px;
 }
 
 #custom-reboot {

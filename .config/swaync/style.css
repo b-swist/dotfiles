@@ -1,0 +1,20 @@
+@import 'themes/everforest.css';
+
+* {
+  font-family: FiraCode Nerd Font;
+}
+
+.notification {
+  background-color: @bg;
+  opacity: 0.90;
+  border-radius: 12px;
+}
+
+.control-center {
+  background-color: @bg;
+  opacity: 0.90;
+}
+
+.control-center .notification {
+  background-color: @green;
+}
