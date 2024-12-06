@@ -6,6 +6,7 @@ vim.opt.inccommand = "split"
 vim.opt.list = true
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
+vim.opt.showmode = false
 
 vim.opt.number = true
 vim.opt.scrolloff = 10

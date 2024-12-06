@@ -1,3 +1,4 @@
+-- install lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -14,42 +15,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- add plugins
 require("lazy").setup({
-
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-    },
-
-    {
-        "hrsh7th/nvim-cmp",
-        dependencies = {
-            "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-path",
-            "hrsh7th/cmp-cmdline",
-        },
-        -- config = function()
-        --     require("plugins.nvim-cmp")
-        -- end,
-    },
-
-    "L3MON4D3/LuaSnip",
 
     "lewis6991/gitsigns.nvim",
     "folke/which-key.nvim",
-
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-
-    {
-        'windwp/nvim-autopairs',
-        event = "InsertEnter",
-        config = true
-        -- use opts = {} for passing setup options
-        -- this is equivalent to setup({}) function
-    },
 
     {
         "sainnhe/everforest",
@@ -60,4 +30,55 @@ require("lazy").setup({
             vim.cmd.colorscheme("everforest")
         end
     },
+
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+    },
+
+    {
+        "nvim-telescope/telescope.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        }
+    },
+
+    {
+        "williamboman/mason.nvim",
+        dependencies = {
+            "williamboman/mason-lspconfig.nvim",
+            "neovim/nvim-lspconfig"
+        }
+    },
+
+    {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline",
+            "L3MON4D3/LuaSnip",
+        },
+        -- config = function()
+        --     require("plugins.nvim-cmp")
+        -- end,
+    },
+
+    {
+        "nvim-lualine/lualine.nvim",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons"
+        }
+    },
+
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        -- config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
+    }
 })
+
+require("lualine").setup()
