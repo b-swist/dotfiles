@@ -16,9 +16,8 @@
   "modules-center": [
     "clock"
   ],
-  "modules-right": [
-    "group/hardware",
-    "group/other",
+  "modules-right": [ "group/hardware",
+    "network",
     "custom/pacman",
     "pulseaudio",
     "custom/notification",
@@ -61,26 +60,21 @@
     "interval": 5,
     "format": "{usage}%  ",
     "max-length": 10,
+    "on-click": "kitty btop",
     "tooltip": false
   },
 
   "custom/separator": {
     "format": "|",
+    "on-click": "kitty btop",
     "tooltip": false
   },
 
   "memory": {
     "interval": 5,
     "format": "{used:0.0f}G/{total:0.0f}G  ",
+    "on-click": "kitty btop",
     "tooltip": false
-  },
-
-  "group/other": {
-    "orientation": "horizontal",
-    "modules": [
-      "network",
-      "tray"
-    ]
   },
 
   "network": {
@@ -89,10 +83,6 @@
     "format-alt": "󰇚{bandwidthDownBytes} 󰕒{bandwidthUpBytes}",
     "interval": 5,
     "tooltip": false
-  },
-
-  "tray": {
-
   },
 
   "custom/pacman": {
@@ -153,19 +143,19 @@
 
   "custom/poweroff": {
     "format": " ",
-    "on-click": "poweroff",
+    "on-double-click": "poweroff",
     "tooltip": false
   },
 
   "custom/sleep": {
     "format": "󰒲 ",
-    "on-click": "systemctl suspend",
+    "on-double-click": "systemctl suspend",
     "tooltip": false
   },
 
   "custom/reboot": {
     "format": " ",
-    "on-click": "reboot",
+    "on-double-click": "reboot",
     "tooltip": false
-  },
+  }
 }

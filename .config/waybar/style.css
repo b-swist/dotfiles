@@ -62,15 +62,12 @@ window#waybar.empty #window {
   padding-right: 7px;
 }
 
-#other {
+#network {
   background-color: @orange;
   border-radius: 12px;
-  margin-left: 5px;
-}
-
-#network {
   padding-left: 12px;
   padding-right: 10px;
+  margin-left: 5px;
 }
 
 #network.disconnected {
@@ -103,9 +100,7 @@ window#waybar.empty #window {
 }
 
 #custom-notification.dnd-none,
-#custom-notification.dnd-inhibited-none,
-#custom-notification.dnd-notification,
-#custom-notification.dnd-inhibited-notification {
+#custom-notification.dnd-notification {
   padding-left: 13px;
   padding-right: 7px;
 }

@@ -1,98 +1,127 @@
 @import 'themes/everforest.css';
 
 * {
-	all: unset;
-	font-family: FiraCode Nerd Font;
+    all: unset;
+    font-family: FiraCode Nerd Font;
 }
 
 .control-center {
-	background-color: @bg_dim;
-	/*opacity: 0.90;*/
-	border-radius: 12px;
+    background-color: @bg_dim;
+    border-radius: 12px;
+}
+
+.control-center-list-placeholder {
+    color: @fg;
+    opacity: 0.5;
 }
 
 .control-center .notification {
-	background-color: @bg;
-	margin-left: 10px;
+    background-color: @bg;
+    border-radius: 12px;
+    margin-left: 10px;
 }
+
+.control-center .notification-default-action:hover {
+    background-color: @bg2;
+    border-radius: 12px;
+}
+
 .widget-title {
-	font-size: 16px;
-	font-weight: bold;
-	color: @fg;
-	margin: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: @fg;
+    border-bottom: 2px solid @bg2;
+    padding-bottom: 15px;
+    margin: 15px;
 }
 
 .widget-title > button {
-	background-color: @bg;
-	border-radius: 12px;
-	padding: 8px;
+    background-color: @bg;
+    border-radius: 14px;
+    padding: 9px;
 }
 
 .widget-title > button:hover {
-	background: @bg2;
-	transition: background 0.15s ease-in-out;
+    background: @bg2;
+    transition: background-color 0.15s ease-in-out;
 }
 
 .widget-dnd {
-	font-size: 14px;
-	font-weight: bold;
-	color: @fg;
-	margin: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: @fg;
+    margin: 0 25px;
 }
 
 .widget-dnd > switch {
-	color: transparent;
-	background-color: @bg;
-	border-radius: 12px;
-	padding: 6px 4px;
+    color: transparent;
+    background-color: @bg;
+    border-radius: 12px;
 }
 
 .widget-dnd > switch:checked {
-	/*background-color: @green;*/
+    background-color: @bg_blue;
 }
 
 .widget-dnd > switch slider {
-	background: @fg;
-	border-radius: 100%;
-	min-width: 20px;
-	min-height: 20px;
+    background: @fg;
+    border-radius: 100%;
+    min-height: 28px;
+    min-width: 28px;
 }
 
 .notification {
-	background-color: @bg_dim;
-	color: @fg;
-	/*opacity: 0.90;*/
-	border-radius: 12px;
-	margin-top: 10px;
-	margin-right: 10px;
+    background-color: @bg_dim;
+    color: @fg;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .notification-content {
-	margin: 10px;
-}
-
-.notification .time {
-	margin-right: 10px;
-	/*vertical-align: text-top;*/
+    margin: 10px;
 }
 
 .notification .image {
-	border-radius: 12px;
-	margin-right: 10px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.notification-group.collapsed:hover .notification {
+    background-color: @bg2;
+}
+
+.notification-group-headers {
+    font-size: 14px;
+    font-weight: bold;
+    color: @fg;
+    margin: 10px;
+}
+
+.notification-group-icon {
+    margin-right: 10px;
+}
+
+.notification-group-buttons {
+    color: @fg;
+    background-color: @bg_dim;
+    margin-right: 10px;
 }
 
 .close-button {
-	background-color: @bg;
-	border-radius: 100%;
-	min-width: 20px;
-	min-height: 20px;
+    color: @fg;
+    background-color: @bg;
+    border-radius: 100%;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 10px 10px 0;
 }
 
 .close-button:hover {
-	background-color: @red;
-	transition: background 0.15s ease-in-out;
+    background-color: @red;
+    transition: background-color 0.15s ease-in-out;
 }
 
 .notification.critical {
-	background-color: @bg_red;
+    background-color: @bg_red;
 }
