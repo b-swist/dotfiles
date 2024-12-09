@@ -1,12 +1,22 @@
-@import 'themes/everforest.css';
+/* colors */
+@define-color fg #D3C6AA;
+@define-color bg #232A2E;
 
+@define-color noti #2D353B;
+@define-color noti-hover #3D484D;
+@define-color shadow #181C1F;
+@define-color dnd #3A515D;
+@define-color crit #543A48;
+@define-color red #E67E80;
+
+/* main config */
 * {
     all: unset;
     font-family: FiraCode Nerd Font;
 }
 
 .control-center {
-    background-color: @bg_dim;
+    background-color: @bg;
     border-radius: 12px;
 }
 
@@ -16,13 +26,14 @@
 }
 
 .control-center .notification {
-    background-color: @bg;
+    background-color: @noti;
     border-radius: 12px;
-    margin-left: 10px;
+    margin: 8px 15px;
+    box-shadow: 0 5px 0 -1px @shadow;
 }
 
 .control-center .notification-default-action:hover {
-    background-color: @bg2;
+    background-color: @noti-hover;
     border-radius: 12px;
 }
 
@@ -30,19 +41,19 @@
     font-size: 17px;
     font-weight: bold;
     color: @fg;
-    border-bottom: 2px solid @bg2;
+    border-bottom: 2px solid @noti-hover;
     padding-bottom: 15px;
     margin: 15px;
 }
 
 .widget-title > button {
-    background-color: @bg;
+    background-color: @noti;
     border-radius: 14px;
     padding: 9px;
 }
 
 .widget-title > button:hover {
-    background: @bg2;
+    background: @noti-hover;
     transition: background-color 0.15s ease-in-out;
 }
 
@@ -50,17 +61,17 @@
     font-size: 14px;
     font-weight: bold;
     color: @fg;
-    margin: 0 25px;
+    margin: 0 20px;
 }
 
 .widget-dnd > switch {
     color: transparent;
-    background-color: @bg;
+    background-color: @noti;
     border-radius: 12px;
 }
 
 .widget-dnd > switch:checked {
-    background-color: @bg_blue;
+    background-color: @dnd;
 }
 
 .widget-dnd > switch slider {
@@ -71,7 +82,7 @@
 }
 
 .notification {
-    background-color: @bg_dim;
+    background-color: @bg;
     color: @fg;
     border-radius: 12px;
     margin-top: 10px;
@@ -87,15 +98,17 @@
     margin-right: 10px;
 }
 
+
 .notification-group.collapsed:hover .notification {
-    background-color: @bg2;
+    background-color: @noti-hover;
+    transition: background-color 0.15s ease-in-out;
 }
 
 .notification-group-headers {
     font-size: 14px;
     font-weight: bold;
     color: @fg;
-    margin: 10px;
+    margin: 10px 20px;
 }
 
 .notification-group-icon {
@@ -104,13 +117,13 @@
 
 .notification-group-buttons {
     color: @fg;
-    background-color: @bg_dim;
-    margin-right: 10px;
+    background-color: @bg;
+    margin-right: 15px;
 }
 
 .close-button {
     color: @fg;
-    background-color: @bg;
+    background-color: @noti;
     border-radius: 100%;
     min-width: 20px;
     min-height: 20px;
@@ -123,5 +136,5 @@
 }
 
 .notification.critical {
-    background-color: @bg_red;
+    background-color: @crit;
 }

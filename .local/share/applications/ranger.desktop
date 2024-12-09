@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=ranger
-GenericName=File Manager
-Comment=Launches the ranger file manager
-Terminal=false
-Exec=kitty --class ranger -e ranger
-Categories=ConsoleOnly;System;FileTools;FileManager
-Keywords=File;Manager;Browser;Explorer;Launcher;Vi;Vim;Python
