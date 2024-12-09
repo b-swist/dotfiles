@@ -1,0 +1,50 @@
+* {
+    all: unset;
+    font-family: FiraCode Nerd Font;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+window {
+    background-color: rgba(35, 42, 46, 0.85);
+}
+
+button {
+    border-radius: 40px;
+    color: #D3C6AA;
+    background-color: #2D353B;
+    margin: 10px;
+    padding-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
+button:hover {
+    background-color: #425047;
+    transition: background-color 0.15s ease-in-out;
+}
+
+#lock {
+    background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("icons/reboot.png"));
+}
